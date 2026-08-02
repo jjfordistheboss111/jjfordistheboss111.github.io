@@ -1,0 +1,90 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    background:black;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+.welcoming{
+    border:solid 2px white;
+    padding:30px; 
+    overflow-y: hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;   
+    position: relative;
+    width:300px;
+    text-align: center;
+    background:white;
+    color:black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.welcoming h1{
+    animation: jj 1s 4s linear forwards;
+}
+.welcoming span{
+    position:absolute;
+    font-size:200%;
+    font-weight: bold;
+
+    overflow-y: hidden;
+}
+.welcoming #f{
+    animation: timing 1s 4s linear forwards, jj 1s 10s linear forwards;
+    transform: translateY(-200px);
+}
+.welcoming #s{
+    animation: timing 1s 10s linear forwards;
+    transform: translateY(-200px);
+}
+
+@keyframes jj{
+    from{transform: translateY(0px);}
+    to{transform: translateY(200px);}
+}
+@keyframes timing{
+    from{transform: translateY(-200px);}
+    to{transform:translateY(0px)}
+}
+.time{
+    position:absolute;
+    top:20px;
+    left:30px;
+}
+#open{
+    position:absolute;
+    top:20px;
+    right:20px;
+    font-size:200%;
+    cursor:pointer;
+
+}
+#close{
+    position:absolute;
+    bottom:20px;
+    left:30px;
+    font-size:200%;
+    cursor:pointer;
+}
+.overlay{
+    background:white;
+    z-index:2;
+    position:fixed;
+    inset: 0;
+    color:black;
+    display:flex;
+    justify-content:Center;
+    align-items:center;
+    width:0;
+    height:0;
+    white-space: nowrap;
+    overflow:hidden;
+    transition:all .3s ease-in;
+    
+}
